@@ -27,11 +27,7 @@
       tags: DevAAC
     - include: tasks/tfs.yml
       tags: tfs
-    - include: tasks/tfs-old.yml
-      tags: tfs-old
     - include: tasks/general-last.yml
-    - include: tasks/wine.yml
-      tags: wine
 
   handlers:
     - name: reload systemd
