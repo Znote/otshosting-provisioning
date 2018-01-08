@@ -16,7 +16,7 @@
     - include: tasks/php5-fpm.yml  
       when: ansible_distribution_major_version|int < 16
       tags: default
-    - include: tasks/php7.0-fpm.yml
+    - include: tasks/php7.1-fpm.yml
       when: ansible_distribution_major_version|int > 15
       tags: default
     - include: tasks/nginx.yml
@@ -43,8 +43,8 @@
     - name: restart nginx
       service: name=nginx state=restarted
 
-    - name: restart php7.0-fpm
-      service: name=php7.0-fpm state=restarted
+    - name: restart php7.1-fpm
+      service: name=php7.1-fpm state=restarted
       
     - name: restart php5-fpm
       service: name=php5-fpm state=restarted
